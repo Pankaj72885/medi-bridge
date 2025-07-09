@@ -1,0 +1,17 @@
+{
+  "name": "medi-bridge",
+  "version": "1.0.0",
+  "description": "Medi Bridge - Helthcare Landing Page.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/main.css -o ./src/index.css --watch"
+  },
+  "keywords": ["Medi Bridge", "Helthcare", "Landing Page"],
+  "author": "Pankaj Bepari",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

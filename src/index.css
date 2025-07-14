@@ -469,9 +469,6 @@
   .bg-\[url\(\'\/src\/images\/Testimonial-image\.png\'\)\] {
     background-image: url('/src/images/Testimonial-image.png');
   }
-  .bg-\[url\(\/src\/images\/banner-photo\.png\)\] {
-    background-image: url(/src/images/banner-photo.png);
-  }
   .from-\[\#111111\]\/10 {
     --tw-gradient-from: color-mix(in oklab, #111111 10%, transparent);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));

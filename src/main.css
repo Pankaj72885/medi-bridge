@@ -5,6 +5,10 @@
   --font-plus-jakarta: "Plus Jakarta Sans", sans-serif;
   --color-neutral-500: #101918;
   --color-neutral-300: #5f6564;
+  --color-neutral-200: #919595;
+  --color-neutral-50: #f9fafa;
+  --color-card-border: rgba(145, 149, 149, 0.24);
+
   /* --color-neutral-50: #f9fafa; */
   --color-primary-50: #e6f2f1;
   --color-primary-100: #b0d7d2;

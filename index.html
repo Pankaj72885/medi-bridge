@@ -12,87 +12,187 @@
     <title>Medi Bridge - Helthcare Landing Page</title>
   </head>
   <body
-    class="font-plus-jakarta max-w-[1340px] container mx-auto flex flex-col gap-28"
+    class="font-plus-jakarta max-w-[1340px] container mx-auto flex flex-col gap-10 md:gap-28"
   >
     <!-- Header Section -->
-    <header class="flex flex-col gap-16">
+    <header class="flex flex-col gap-8 md:gap-16">
       <!-- Navigation Bar -->
-      <nav class="px-16 py-9 flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center gap-2.5">
-          <img src="./src/images/logo/Logo.svg" alt="Logo" />
-          <h1 class="font-semibold text-lg text-neutral-500">Medi Bridge</h1>
+      <nav
+        class="mx-4 md:mx-8 lg:mx-16 py-5 md:py-9 flex justify-between items-center gap-3"
+      >
+        <!-- Desktop Navbar -->
+        <div class="flex-1 flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center gap-2.5">
+            <img src="./src/images/logo/Logo.svg" alt="Logo" />
+            <h1 class="font-semibold text-lg text-neutral-500">Medi Bridge</h1>
+          </div>
+          <!-- Menu Bar -->
+          <ul class="hidden lg:flex gap-9">
+            <li>
+              <a
+                class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                href=""
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="flex gap-1.5 items-center font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                href=""
+                >Features
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                href=""
+                >Find Doctor</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                href=""
+                >Blog</a
+              >
+            </li>
+          </ul>
+          <!-- Button -->
+          <ul class="hidden md:flex items-center gap-3">
+            <li>
+              <a href=""
+                ><button
+                  class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-neutral-500 bg-neutral-100 hover:bg-neutral-200 ring ring-card-border"
+                >
+                  Login
+                </button></a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><button
+                  class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-white bg-primary-500 hover:bg-primary-700"
+                >
+                  Register
+                </button></a
+              >
+            </li>
+          </ul>
         </div>
-        <!-- Menu Bar -->
-        <ul class="flex gap-9">
-          <li>
-            <a
-              class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
-              href=""
-              >About Us</a
+
+        <!-- Mobile-First Dropdown Container -->
+        <div class="lg:hidden relative group">
+          <!-- Dropdown Button - Larger touch target for mobile -->
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
             >
-          </li>
-          <li>
-            <a
-              class="flex gap-1.5 items-center font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
-              href=""
-              >Features
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a
-              class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
-              href=""
-              >Find Doctor</a
-            >
-          </li>
-          <li>
-            <a
-              class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
-              href=""
-              >Blog</a
-            >
-          </li>
-        </ul>
-        <!-- Button -->
-        <ul class="flex items-center gap-3">
-          <li>
-            <a href=""
-              ><button
-                class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-neutral-500 bg-neutral-100 hover:bg-neutral-200 ring ring-card-border"
-              >
-                Login
-              </button></a
-            >
-          </li>
-          <li>
-            <a href=""
-              ><button
-                class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-white bg-primary-500 hover:bg-primary-700"
-              >
-                Register
-              </button></a
-            >
-          </li>
-        </ul>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu - Mobile optimized -->
+          <div
+            class="absolute top-full right-0 mt-2 md:mt-3 p-3 bg-white border border-gray-200 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-20"
+          >
+            <div class="flex flex-col gap-5">
+              <!-- Menu Bar -->
+              <ul class="flex flex-col items-start gap-3">
+                <li>
+                  <a
+                    class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                    href=""
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="flex gap-1.5 items-center font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                    href=""
+                    >Features
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                    href=""
+                    >Find Doctor</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="font-medium text-sm text-neutral-500 cursor-pointer hover:underline"
+                    href=""
+                    >Blog</a
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <ul class="md:hidden flex flex-col items-start gap-3">
+                <li>
+                  <a href=""
+                    ><button
+                      class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-neutral-500 bg-neutral-100 hover:bg-neutral-200 ring ring-card-border"
+                    >
+                      Login
+                    </button></a
+                  >
+                </li>
+                <li>
+                  <a href=""
+                    ><button
+                      class="px-6 py-3 text-sm font-semibold rounded-lg cursor-pointer text-white bg-primary-500 hover:bg-primary-700"
+                    >
+                      Register
+                    </button></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </nav>
       <!-- Hero Section -->
       <section
-        class="grid md:grid-cols-2 grid-cols-1 items-center px-16 gap-11"
+        class="mx-4 md:mx-8 lg:mx-16 grid md:grid-cols-2 grid-cols-1 items-center gap-11"
       >
         <!-- Description -->
         <div class="flex flex-col gap-11">
@@ -134,16 +234,17 @@
             </div>
             <!-- Main Text -->
             <div class="flex flex-col gap-6">
-              <h1 class="text-6xl font-medium text-neutral-500 leading-[1.2]">
+              <h1
+                class="text-[clamp(2.375rem,0.9957rem+6.8966vw,3.75rem)] md:text-[clamp(2.25rem,4.6875vw,3.75rem)] font-medium text-neutral-500 leading-[1.2]"
+              >
                 Transforming <br />
                 Healthcare for a <br />
                 Better Tomorrow
               </h1>
               <p class="text-base text-neutral-300 leading-[1.6]">
-                With a focus on innovation, compassion, and personalized <br />
-                care, we are committed to guiding you towards a healthier and
-                <br />
-                more vibrant tomorrow.
+                With a focus on innovation, compassion, and personalized care,
+                we are committed to guiding you towards a healthier and more
+                vibrant tomorrow.
               </p>
             </div>
           </div>
@@ -170,91 +271,22 @@
           </ul>
         </div>
         <!-- Image -->
-        <div class="mx-auto relative">
-          <img src="./src/images/doctor.png" alt="Doctor Image" />
-          <img
-            class="absolute left-[-28px] bottom-2"
-            src="./src/images/logo/allow.png"
-            alt="Allow sign to top"
-          />
-          <img
-            class="absolute right-[-28px] top-25 rotate-180"
-            src="./src/images/logo/allow.png"
-            alt="Allow sign to bottom"
-          />
-          <!-- Card -->
-          <div
-            class="flex items-center justify-between gap-7 px-4 py-2 shadow absolute rounded-2xl ring ring-gray-100 top-36 lg:left-[-136px] left-[-70px] bg-white"
-          >
-            <div class="bg-gray-100 pt-2 rounded-xl ring ring-gray-200 px-2">
-              <img src="./src/images/Dr-card.png" alt="Doctor Image" />
-            </div>
-            <div class="flex flex-col gap-2">
-              <button
-                class="bg-primary-50 ring text-primary-700 text-xs px-3 py-1 rounded-full"
-              >
-                Available
-              </button>
-              <h3 class="text-neutral-500 text-sm font-semibold">
-                Dr. Andea G
-              </h3>
-              <p class="text-neutral-300 text-[13px]">Cardiologist</p>
-              <p class="text-neutral-300 text-xs">
-                <span class="text-primary-500 text-sm font-semibold">55$</span
-                >/session
-              </p>
-            </div>
-            <button
-              class="text-primary-500 rounded-full ring px-2.5 text-[11px] font-semibold py-1.5 flex items-center gap-1.5"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-3"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Book Now
-            </button>
-          </div>
-
-          <!-- Green Card -->
-          <div
-            class="bg-primary-500 rounded-2xl max-w-2xs flex flex-col gap-5 p-5 absolute bottom-0 right-[-84px]"
-          >
-            <p class="text-white text-sm font-medium">
-              “The workshops were insightful, the networking opportunities were
-              abundant”
-            </p>
-            <div class="flex justify-between">
-              <div class="">
-                <p class="text-[13px] font-semibold text-white">
-                  Michael Angelo
-                </p>
-                <p class="text-primary-50 text-[11px]">39 Years Old</p>
-              </div>
-              <img
-                class="w-11 h-auto"
-                src="./src/images/logo/comma.png"
-                alt="comma"
-              />
-            </div>
-          </div>
+        <div class="px-3 md:px-0">
+          <img class="w-full h-auto" src="./src/images/Content.png" alt="" />
         </div>
       </section>
       <!-- Social Proof Section  -->
-      <section class="flex flex-col gap-6 px-18 py-11 bg-neutral-50">
+      <section
+        class="flex flex-col gap-6 mx-6 md:mx-10 lg:mx-16 py-11 bg-neutral-50"
+      >
         <!-- Title -->
         <h3 class="text-center text-xl font-medium text-neutral-200">
           Trusted by
         </h3>
         <!-- Images -->
-        <div class="flex gap-12 justify-center items-center flex-wrap">
+        <div
+          class="flex flex-col md:flex-row md:gap-12 gap-4 justify-center items-center flex-wrap"
+        >
           <img src="./src/images/logo/social1.png" alt="Social Proof 1" />
           <img src="./src/images/logo/social2.png" alt="Social Proof 2" />
           <img src="./src/images/logo/social3.png" alt="Social Proof 3" />
@@ -263,11 +295,11 @@
         </div>
       </section>
       <!-- Why Choose Us Section -->
-      <section class="flex flex-col px-16 gap-15">
+      <section class="flex flex-col mx-4 md:mx-8 lg:mx-16 gap-15">
         <!-- Content -->
         <div class="flex flex-col items-center gap-5.5">
           <h1
-            class="text-5xl leading-[1.4] text-neutral-500 font-medium text-center"
+            class="text-[clamp(1.625rem,0.3581rem+5.4054vw,2.25rem)] md:text-5xl leading-[1.4] text-neutral-500 font-medium text-center"
           >
             Experience the Difference <br />
             in Our Healthcare Approach
@@ -366,12 +398,15 @@
         </div>
       </section>
     </header>
+
     <!-- Our Servises Section -->
-    <section class="mx-16 flex items-center flex-col md:flex-row gap-11">
+    <section
+      class="mx-4 md:mx-8 lg:mx-16 flex items-center flex-col lg:flex-row gap-11"
+    >
       <!-- Images -->
-      <div class="relative">
+      <div class="relative flex-1">
         <img
-          class="max-w-150 h-auto"
+          class="w-full h-auto"
           src="./src/images/services.png"
           alt="Services image"
         />
@@ -383,13 +418,17 @@
         </div>
       </div>
       <!-- Text Content -->
-      <div class="flex flex-col gap-11">
+      <div class="flex flex-col flex-1 gap-11">
         <div class="flex flex-col gap-5.5">
-          <h1 class="text-[44px] font-medium text-neutral-500 leading-[1.4]">
+          <h1
+            class="md:text-[44px] text-[clamp(1.625rem,-0.6554rem+9.7297vw,2.75rem)] font-medium text-neutral-500 leading-[1.4] text-center md:text-left"
+          >
             Unveiling a Spectrum <br />
             of Specialized Offerings
           </h1>
-          <p class="text-base text-neutral-300 leading-[1.4]">
+          <p
+            class="text-base text-center md:text-left text-neutral-300 leading-[1.4]"
+          >
             Discover a tailored approach to your health with our versatile range
             of specialized services, ensuring every aspect of your healthcare
             journey is seamlessly addressed.
@@ -442,13 +481,16 @@
         </div>
       </div>
     </section>
+
     <!-- Our Doctors Section -->
-    <section class="mx-16 flex flex-col gap-11">
+    <section class="mx-4 md:mx-8 lg:mx-16 flex flex-col gap-6 md:gap-11">
       <!-- Contens -->
-      <div class="flex flex-col gap-15">
+      <div class="flex flex-col md:gap-15 gap-8">
         <!-- Content -->
         <div class="flex flex-col gap-4.5 items-center">
-          <h1 class="text-center font-medium text-neutral-500 text-[44px]">
+          <h1
+            class="text-center font-medium text-neutral-500 md:text-[44px] text-[clamp(1.625rem,-0.8554rem+9.4297vw,2.75rem)]"
+          >
             Meet the Healthcare <br />
             Heroes Ready to Serve You
           </h1>
@@ -458,7 +500,7 @@
           </p>
         </div>
         <!-- Card -->
-        <div class="flex gap-7.5 justify-around">
+        <div class="flex flex-col md:flex-row gap-7.5 justify-around">
           <!-- Card-1 -->
           <div class="flex flex-col flex-1/3 gap-5.5">
             <!-- Avatar -->
@@ -656,13 +698,16 @@
         </button>
       </div>
     </section>
+
     <!-- Testimonials Section -->
-    <section class="mx-16 flex flex-col gap-11">
+    <section class="mx-4 md:mx-8 lg:mx-16 flex flex-col gap-11">
       <!-- Contens -->
       <div class="flex flex-col gap-15">
         <!-- Content -->
         <div class="flex flex-col gap-4.5 items-center">
-          <h1 class="text-center font-medium text-neutral-500 text-[44px]">
+          <h1
+            class="text-center font-medium text-neutral-500 md:text-[44px] text-[clamp(1.625rem,-0.8554rem+9.4297vw,2.75rem)]"
+          >
             See What Our <br />
             Patients Have to Say
           </h1>
@@ -671,10 +716,10 @@
           </p>
         </div>
         <!-- Card -->
-        <div class="flex gap-7.5 justify-around">
+        <div class="flex flex-col md:flex-row gap-4 md:gap-7.5 justify-around">
           <!-- Testimonial Card-1 -->
           <div
-            class="flex flex-col flex-1 gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
+            class="flex flex-col flex-1 gap-8 md:gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
           >
             <!-- Text -->
             <p class="text-justify text-neutral-500 text-lg leading-[1.8]">
@@ -726,7 +771,7 @@
           </div>
           <!-- Testimonial Card-3 -->
           <div
-            class="flex flex-col flex-1 gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
+            class="flex flex-col flex-1 gap-8 md:gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
           >
             <!-- Text -->
             <p class="text-justify text-neutral-500 text-lg leading-[1.8]">
@@ -764,15 +809,20 @@
         </button>
       </div>
     </section>
+
     <!-- FAQs Section -->
-    <section class="mx-16 flex items-start justify-between">
-      <div class="flex-1/2 flex flex-col gap-11 items-start">
+    <section
+      class="mx-4 md:mx-8 lg:mx-16 flex flex-col md:flex-row gap-8 md:gap-0 items-center md:items-start justify-between"
+    >
+      <div class="flex-1/2 flex flex-col gap-11 md:items-start items-center">
         <div class="flex flex-col gap-5.5">
-          <h3 class="text-[44px] font-medium text-neutral-500">
+          <h3
+            class="md:text-[44px] text-[42px] font-medium text-neutral-500 text-center md:text-left"
+          >
             Frequently <br />
             Asked Questions
           </h3>
-          <p class="text-base text-neutral-300">
+          <p class="text-base text-neutral-300 text-center md:text-left">
             Still have something to ask? Contact our sales team
           </p>
         </div>
@@ -787,7 +837,7 @@
         <div class="flex flex-col rounded-2xl ring ring-card-border">
           <!-- Header -->
           <div
-            class="flex justify-between items-center p-7.5 bg-primary-700 rounded-t-2xl"
+            class="flex justify-between items-center p-4 md:p-7.5 bg-primary-700 rounded-t-2xl"
           >
             <h3 class="font-semibold text-white text-[22px]">
               How do I schedule an appointment?
@@ -816,7 +866,7 @@
         </div>
         <!-- Accordian-2 -->
         <div
-          class="flex justify-between items-center p-7.5 ring ring-card-border rounded-2xl"
+          class="flex justify-between items-center p-4 md:p-7.5 ring ring-card-border rounded-2xl"
         >
           <h3 class="text-[22px] text-neutral-500 font-semibold">
             What types of healthcare services does we offer?
@@ -838,7 +888,7 @@
         </div>
         <!-- Accordian-3 -->
         <div
-          class="flex-1 flex justify-between items-center p-7.5 ring ring-card-border rounded-2xl"
+          class="flex-1 flex justify-between items-center p-4 md:p-7.5 ring ring-card-border rounded-2xl"
         >
           <h3 class="text-[22px] text-neutral-500 font-semibold">
             Are walk-in appointments available?
@@ -860,7 +910,7 @@
         </div>
         <!-- Accordian-4 -->
         <div
-          class="flex-1 flex justify-between items-center p-7.5 ring ring-card-border rounded-2xl"
+          class="flex-1 flex justify-between items-center p-4 md:p-7.5 ring ring-card-border rounded-2xl"
         >
           <h3 class="text-[22px] text-neutral-500 font-semibold">
             Does Medi Bridge accept insurance plans?
@@ -882,7 +932,7 @@
         </div>
         <!-- Accordian-5 -->
         <div
-          class="flex-1 flex justify-between items-center p-7.5 ring ring-card-border rounded-2xl"
+          class="flex-1 flex justify-between items-center p-4 md:p-7.5 ring ring-card-border rounded-2xl"
         >
           <h3 class="text-[22px] text-neutral-500 font-semibold">
             What safety measures does Medi Bridge have?
@@ -904,12 +954,15 @@
         </div>
       </div>
     </section>
+
     <!-- Banner Section -->
     <section
-      class="mx-16 bg-[url(/src/images/Banner.png)] bg-no-repeat bg-cover bg-center rounded-2xl p-15 flex flex-col items-center gap-12"
+      class="mx-4 md:mx-8 lg:mx-16 bg-[url(/src/images/Banner.png)] bg-no-repeat bg-cover bg-center rounded-2xl p-7 md:p-15 flex flex-col items-center gap-12"
     >
       <div class="flex flex-col gap-6">
-        <h3 class="text-5xl font-bold text-center text-white">
+        <h3
+          class="text-[clamp(2.125rem,0.3514rem+7.5676vw,3rem)] md:text-5xl font-bold text-center text-white"
+        >
           Discover Comprehensive <br />
           Care Tailored to Your Needs
         </h3>
@@ -924,9 +977,10 @@
         Make an Appoinment
       </button>
     </section>
+
     <!-- Footer Section -->
-    <footer class="p-18.5 flex flex-col gap-15">
-      <div class="flex">
+    <footer class="p-6 md:p-12.5 lg:p-18.5 flex flex-col gap-15">
+      <div class="flex flex-col md:flex-row gap-6 md:gap-0">
         <!-- logo -->
         <div class="flex-1 flex flex-col gap-5.5">
           <div class="flex gap-2 justify-start items-center">
@@ -965,10 +1019,10 @@
 
       <!-- footer  -->
       <div
-        class="border-t border-card-border pt-6 flex justify-between text-sm text-neutral-500/40"
+        class="border-t border-card-border pt-6 flex flex-wrap gap-3 justify-center md:justify-between text-sm text-neutral-500/40"
       >
         <p>&copy;Copyright Medi Bridge 2024</p>
-        <ul class="flex gap-9">
+        <ul class="flex gap-9 text-center">
           <li><a href="">FAQ</a></li>
           <li><a href="">Terms of Condition</a></li>
           <li><a href="">Privacy Policy</a></li>

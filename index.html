@@ -235,13 +235,13 @@
             <!-- Main Text -->
             <div class="flex flex-col gap-6">
               <h1
-                class="text-[clamp(2.375rem,0.9957rem+6.8966vw,3.75rem)] md:text-[clamp(2.25rem,4.6875vw,3.75rem)] font-medium text-neutral-500 leading-[1.2]"
+                class="text-[clamp(2.375rem,0.9957rem+6.8966vw,3.75rem)] md:text-[clamp(2.25rem,4.6875vw,3.75rem)] font-medium text-neutral-500 leading-[1.2] text-center md:text-left"
               >
                 Transforming <br />
                 Healthcare for a <br />
                 Better Tomorrow
               </h1>
-              <p class="text-base text-neutral-300 leading-[1.6]">
+              <p class="text-base text-neutral-300 text-center md:text-left">
                 With a focus on innovation, compassion, and personalized care,
                 we are committed to guiding you towards a healthier and more
                 vibrant tomorrow.
@@ -271,8 +271,95 @@
           </ul>
         </div>
         <!-- Image -->
-        <div class="px-3 md:px-0">
+        <div class="px-3 md:px-0 hidden">
           <img class="w-full h-auto" src="./src/images/Content.png" alt="" />
+        </div>
+        <!-- Image by code-->
+        <div class="mx-auto relative px-4 md:px-0">
+          <img
+            class="h-full w-auto"
+            src="./src/images/doctor.png"
+            alt="Doctor Image"
+          />
+          <img
+            class="absolute md:left-[-28px] left-[-12px] bottom-0 md:bottom-2"
+            src="./src/images/logo/allow.png"
+            alt="Allow sign to top"
+          />
+          <img
+            class="absolute md:right-[-28px] right-[-12px] md:top-25 top-15 rotate-180"
+            src="./src/images/logo/allow.png"
+            alt="Allow sign to bottom"
+          />
+          <!-- Card -->
+          <div
+            class="flex items-center justify-between gap-2 md:gap-7 px-2 md:px-4 py-1 md:py-2 shadow absolute rounded-xl md:rounded-2xl ring ring-gray-100 md:top-36 top-[30%] xl:left-[-40%] lg:left-[-26%] md:left-[-30px] left-0 bg-white"
+          >
+            <div class="bg-gray-100 pt-2 rounded-xl ring ring-gray-200 px-2">
+              <img
+                class="h-full w-auto"
+                src="./src/images/Dr-card.png"
+                alt="Doctor Image"
+              />
+            </div>
+            <div class="flex flex-col gap-1 md:gap-2">
+              <button
+                class="bg-primary-50 ring text-primary-700 text-xs px-3 py-1 rounded-full"
+              >
+                Available
+              </button>
+              <h3 class="text-neutral-500 text-sm font-semibold">
+                Dr. Andea G
+              </h3>
+              <p class="text-neutral-300 text-[13px]">Cardiologist</p>
+              <p class="text-neutral-300 text-xs">
+                <span class="text-primary-500 text-sm font-semibold">55$</span
+                >/session
+              </p>
+            </div>
+            <button
+              class="text-primary-500 rounded-full ring px-2.5 text-[11px] font-semibold py-1.5 flex items-center gap-1.5"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-3"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Book Now
+            </button>
+          </div>
+
+          <!-- Green Card -->
+          <div
+            class="bg-primary-500 rounded-2xl max-w-2xs flex flex-col md:gap-5 gap-2 md:p-5 p-2 absolute bottom-0 lg:right-[-84px] md:right-[-24px] right-0"
+          >
+            <p class="text-white md:text-sm text-xs font-medium">
+              “The workshops were insightful, the networking opportunities were
+              abundant”
+            </p>
+            <div class="flex justify-between">
+              <div class="">
+                <p class="md:text-[13px] text-[11px] font-semibold text-white">
+                  Michael Angelo
+                </p>
+                <p class="text-primary-50 md:text-[11px] text-[10px]">
+                  39 Years Old
+                </p>
+              </div>
+              <img
+                class="md:w-11 w-7 h-auto"
+                src="./src/images/logo/comma.png"
+                alt="comma"
+              />
+            </div>
+          </div>
         </div>
       </section>
       <!-- Social Proof Section  -->
@@ -299,7 +386,7 @@
         <!-- Content -->
         <div class="flex flex-col items-center gap-5.5">
           <h1
-            class="text-[clamp(1.625rem,0.3581rem+5.4054vw,2.25rem)] md:text-5xl leading-[1.4] text-neutral-500 font-medium text-center"
+            class="text-[clamp(1.625rem,0.3581rem+5.4054vw,2.25rem)] md:text-5xl text-neutral-500 font-medium text-center"
           >
             Experience the Difference <br />
             in Our Healthcare Approach
@@ -326,7 +413,7 @@
               <h1 class="text-xl font-semibold text-neutral-500">
                 Expert Care
               </h1>
-              <p class="text-neutral-300 text-sm leading-[1.6] text-center">
+              <p class="text-neutral-300 text-sm text-center">
                 Our team of experienced healthcare professionals is dedicated to
                 providing the highest quality.
               </p>
@@ -347,7 +434,7 @@
               <h1 class="text-xl font-semibold text-neutral-500">
                 Expert Care
               </h1>
-              <p class="text-neutral-300 text-sm leading-[1.6] text-center">
+              <p class="text-neutral-300 text-sm text-center">
                 Our team of experienced healthcare professionals is dedicated to
                 providing the highest quality.
               </p>
@@ -368,7 +455,7 @@
               <h1 class="text-xl font-semibold text-neutral-500">
                 Expert Care
               </h1>
-              <p class="text-neutral-300 text-sm leading-[1.6] text-center">
+              <p class="text-neutral-300 text-sm text-center">
                 Our team of experienced healthcare professionals is dedicated to
                 providing the highest quality.
               </p>
@@ -389,7 +476,7 @@
               <h1 class="text-xl font-semibold text-neutral-500">
                 Expert Care
               </h1>
-              <p class="text-neutral-300 text-sm leading-[1.6] text-center">
+              <p class="text-neutral-300 text-sm text-center">
                 Our team of experienced healthcare professionals is dedicated to
                 providing the highest quality.
               </p>
@@ -421,14 +508,12 @@
       <div class="flex flex-col flex-1 gap-11">
         <div class="flex flex-col gap-5.5">
           <h1
-            class="md:text-[44px] text-[clamp(1.625rem,-0.6554rem+9.7297vw,2.75rem)] font-medium text-neutral-500 leading-[1.4] text-center md:text-left"
+            class="md:text-[44px] text-[clamp(1.625rem,-0.6554rem+9.7297vw,2.75rem)] font-medium text-neutral-500 text-center md:text-left"
           >
             Unveiling a Spectrum <br />
             of Specialized Offerings
           </h1>
-          <p
-            class="text-base text-center md:text-left text-neutral-300 leading-[1.4]"
-          >
+          <p class="text-base text-center md:text-left text-neutral-300">
             Discover a tailored approach to your health with our versatile range
             of specialized services, ensuring every aspect of your healthcare
             journey is seamlessly addressed.
@@ -500,9 +585,11 @@
           </p>
         </div>
         <!-- Card -->
-        <div class="flex flex-col md:flex-row gap-7.5 justify-around">
+        <div
+          class="flex flex-col md:flex-row lg:gap-7.5 md:2.5 gap-5 justify-center items-center"
+        >
           <!-- Card-1 -->
-          <div class="flex flex-col flex-1/3 gap-5.5">
+          <div class="flex flex-col flex-1 gap-5.5">
             <!-- Avatar -->
             <div
               class="relative bg-neutral-50 rounded-xl ring ring-card-border pt-7.5 px-9.5"
@@ -564,7 +651,7 @@
             </div>
           </div>
           <!-- Card-2 -->
-          <div class="flex flex-col gap-5.5 flex-1/3">
+          <div class="flex flex-col gap-5.5 flex-1">
             <!-- Avatar -->
             <div
               class="relative bg-neutral-50 rounded-xl ring ring-card-border pt-7.5 px-9.5"
@@ -626,7 +713,7 @@
             </div>
           </div>
           <!-- Card-3 -->
-          <div class="flex flex-col gap-5.5 flex-1/3">
+          <div class="flex flex-col gap-5.5 flex-1">
             <!-- Avatar -->
             <div
               class="relative bg-neutral-50 rounded-xl ring ring-card-border pt-7.5 px-9.5"
@@ -722,7 +809,7 @@
             class="flex flex-col flex-1 gap-8 md:gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
           >
             <!-- Text -->
-            <p class="text-justify text-neutral-500 text-lg leading-[1.8]">
+            <p class="text-justify text-neutral-500 text-lg">
               "Medi Bridge has been a true lifesaver for me and my family. When
               my father fell ill, we turned to them for help, and they exceeded
               our expectations in every way."
@@ -775,7 +862,7 @@
             class="flex flex-col flex-1 gap-8 md:gap-28 bg-neutral-50 rounded-2xl ring ring-card-border p-7.5"
           >
             <!-- Text -->
-            <p class="text-justify text-neutral-500 text-lg leading-[1.8]">
+            <p class="text-justify text-neutral-500 text-lg">
               "I've been a patient at Medi Bridge for years, and they
               consistently deliver outstanding care. Their dedication to patient
               well-being is evident in every interaction."
